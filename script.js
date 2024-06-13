@@ -34,4 +34,10 @@
     }
     searchBtn.addEventListener("click",() => {
             checkWeather(searchBox.value);
-    })
+    });
+ searchBox.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        checkWeather(searchBox.value);
+    }
+});
